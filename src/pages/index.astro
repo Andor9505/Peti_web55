@@ -1,11 +1,785 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__waves">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="rgba(255,255,255,0.08)" />
+        <path d="M0,55 C480,10 960,80 1440,55 L1440,80 L0,80 Z" fill="rgba(255,255,255,0.05)" />
+      </svg>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge">Július 6–10.</div>
+      <h1 class="hero__title">
+        Balatoni<br />Sport<br />Tábor
+      </h1>
+      <p class="hero__subtitle">Balatonboglár · Beach Hostel</p>
+      <div class="hero__tags">
+        <span>🏐 Strandröpi</span>
+        <span>⚽ Strandfoci</span>
+        <span>🏄 SUP</span>
+      </div>
+      <div class="hero__cta-wrap">
+        <a href="#jelentkezes" class="btn btn--accent">Jelentkezés</a>
+        <a href="#program" class="btn btn--outline">Program</a>
+      </div>
+    </div>
+    <div class="hero__price-tag">
+      <span class="price-label">Tábor ára</span>
+      <span class="price-value">139 900 Ft</span>
+      <span class="price-note">Határidő: Május 28.</span>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🍽️</div>
+          <h3>Napi 3× étkezés</h3>
+          <p>Svédasztalos reggeli, leves + főétel ebédre, főétel vacsorára</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🚂</div>
+          <h3>Utazás biztosított</h3>
+          <p>Közös vonatút a Déli pályaudvarból – az ár tartalmazza</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🏠</div>
+          <h3>Kényelmes szállás</h3>
+          <p>2–8 fős szobák a Beach Hostelben, közvetlenül a Balatonnál</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🏄</div>
+          <h3>SUP bérlés</h3>
+          <p>Stand-Up Paddle bérlési költsége szintén benne van az árban</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="program" id="program">
+    <div class="container">
+      <h2 class="section-title">Heti Program</h2>
+      <div class="program__list">
+        <div class="day-card">
+          <div class="day-card__header">
+            <span class="day-num">H</span>
+            <span class="day-name">Hétfő</span>
+          </div>
+          <ul class="day-card__items">
+            <li>🚂 Utazás &amp; megérkezés</li>
+            <li>🍽️ Ebéd</li>
+            <li>🏖️ Tábornyitás – Strandolás</li>
+            <li>🍽️ Vacsora</li>
+            <li>🎉 Tábornyitó buli</li>
+          </ul>
+        </div>
+        <div class="day-card">
+          <div class="day-card__header">
+            <span class="day-num">K</span>
+            <span class="day-name">Kedd</span>
+          </div>
+          <ul class="day-card__items">
+            <li>🍳 Reggeli</li>
+            <li>⚽ Strandfoci / Strandröpi</li>
+            <li>🍽️ Ebéd</li>
+            <li>🏆 Csapatverseny – ügyességi feladatok</li>
+            <li>🍽️ Vacsora</li>
+            <li>🎤 Karaoke Party</li>
+          </ul>
+        </div>
+        <div class="day-card day-card--highlight">
+          <div class="day-card__header">
+            <span class="day-num">Sz</span>
+            <span class="day-name">Szerda</span>
+          </div>
+          <ul class="day-card__items">
+            <li>🍳 Reggeli</li>
+            <li>🏄 SUP Túra</li>
+            <li>🍽️ Ebéd</li>
+            <li>🏐 Strandröplabda / Stretching</li>
+            <li>🍽️ Vacsora</li>
+            <li>🧠 Sport kvíz</li>
+          </ul>
+        </div>
+        <div class="day-card">
+          <div class="day-card__header">
+            <span class="day-num">Cs</span>
+            <span class="day-name">Csütörtök</span>
+          </div>
+          <ul class="day-card__items">
+            <li>🍳 Reggeli</li>
+            <li>💪 Full Body Kondipark</li>
+            <li>🍽️ Ebéd</li>
+            <li>🏖️ Strandolás / Strandröpi</li>
+            <li>🍽️ Vacsora</li>
+            <li>🎊 Táborzáró buli</li>
+          </ul>
+        </div>
+        <div class="day-card">
+          <div class="day-card__header">
+            <span class="day-num">P</span>
+            <span class="day-name">Péntek</span>
+          </div>
+          <ul class="day-card__items">
+            <li>🍳 Reggeli</li>
+            <li>🏙️ Városnézés</li>
+            <li>🏁 Táborzárás</li>
+            <li>🚂 Hazaút</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JELENTKEZÉS -->
+  <section class="signup" id="jelentkezes">
+    <div class="container">
+      <h2 class="section-title section-title--light">Jelentkezés &amp; Fizetés</h2>
+      <div class="signup__grid">
+        <div class="signup__card">
+          <h3>💳 Fizetési feltételek</h3>
+          <div class="payment-step">
+            <div class="payment-step__num">1</div>
+            <div>
+              <strong>Előleg: 69 950 Ft</strong>
+              <p>Jelentkezéskor utalandó az alábbi számlaszámra</p>
+            </div>
+          </div>
+          <div class="payment-step">
+            <div class="payment-step__num">2</div>
+            <div>
+              <strong>Fennmaradó összeg: 69 950 Ft</strong>
+              <p>Legkésőbb <strong>Május 28-ig</strong> utalandó</p>
+            </div>
+          </div>
+          <div class="bank-box">
+            <p class="bank-box__label">Számlaszám</p>
+            <p class="bank-box__value">1210001118935457</p>
+            <p class="bank-box__label">Kedvezményezett</p>
+            <p class="bank-box__value">Tóth Péter</p>
+            <p class="bank-box__label">Közlemény formátum</p>
+            <p class="bank-box__value bank-box__example">Kiss Péter 9P, Sporttábor</p>
+          </div>
+        </div>
+
+        <div class="signup__card">
+          <h3>⚠️ Lemondási feltételek</h3>
+          <ul class="cancel-list">
+            <li>
+              <span class="cancel-list__dot cancel-list__dot--green"></span>
+              <p>Május 28-ig mondod le → az előleg <strong>50%-a visszajár</strong> (34 975 Ft)</p>
+            </li>
+            <li>
+              <span class="cancel-list__dot cancel-list__dot--red"></span>
+              <p>Május 28 után → <strong>nincs visszatérítés</strong>, ha a tábor megrendezésre kerül</p>
+            </li>
+          </ul>
+
+          <div class="quota-box">
+            <div class="quota-item">
+              <span class="quota-num">12 fő</span>
+              <span class="quota-label">minimum</span>
+            </div>
+            <div class="quota-divider"></div>
+            <div class="quota-item">
+              <span class="quota-num">20 fő</span>
+              <span class="quota-label">maximum</span>
+            </div>
+          </div>
+          <p class="quota-note">Ha a létszám nem éri el a 12 főt, a tábor nem kerül megrendezésre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KAPCSOLAT -->
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Kapcsolat</h2>
+      <div class="contact__grid">
+        <a href="tel:+36307080078" class="contact-card">
+          <div class="contact-card__avatar">MM</div>
+          <div>
+            <p class="contact-card__name">Medve Mónika</p>
+            <p class="contact-card__role">Testnevelő tanár</p>
+            <p class="contact-card__phone">06 30 / 708-0078</p>
+          </div>
+        </a>
+        <a href="tel:+36209776255" class="contact-card">
+          <div class="contact-card__avatar">TP</div>
+          <div>
+            <p class="contact-card__name">Tóth Péter</p>
+            <p class="contact-card__role">Testnevelő tanár</p>
+            <p class="contact-card__phone">06 20 / 977-6255</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Balatoni Sport Tábor &nbsp;·&nbsp; Balatonboglár, Beach Hostel &nbsp;·&nbsp; Július 6–10.</p>
+  </footer>
 </Layout>
+
+<style>
+  /* ─── GLOBALS ─── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: 0.04em;
+    color: var(--blue-deep);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title--light {
+    color: var(--white);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn--accent {
+    background: var(--accent);
+    color: var(--white);
+  }
+
+  .btn--outline {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    color: var(--white);
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    background: linear-gradient(155deg, var(--blue-deep) 0%, var(--blue-mid) 50%, var(--blue-bright) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 2rem 5rem;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23ffffff' fill-opacity='0.06'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .hero__waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .hero__waves svg {
+    width: 100%;
+    height: 80px;
+  }
+
+  .hero__content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 14vw, 9rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .hero__subtitle {
+    font-size: 1.15rem;
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero__tags {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .hero__tags span {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .hero__cta-wrap {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  .hero__price-tag {
+    position: absolute;
+    bottom: 3rem;
+    right: 2rem;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    animation: fadeUp 0.6s 0.5s ease both;
+  }
+
+  .price-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.85;
+  }
+
+  .price-value {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .price-note {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
+  /* ─── FEATURES ─── */
+  .features {
+    padding: 5rem 0;
+    background: var(--blue-light);
+  }
+
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 16px rgba(10, 61, 98, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(10, 61, 98, 0.14);
+  }
+
+  .feature-card__icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--blue-deep);
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* ─── PROGRAM ─── */
+  .program {
+    padding: 5rem 0;
+    background: var(--white);
+  }
+
+  .program__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .day-card {
+    background: var(--blue-light);
+    border-radius: 16px;
+    overflow: hidden;
+    border-top: 4px solid var(--blue-mid);
+    transition: transform 0.2s;
+  }
+
+  .day-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .day-card--highlight {
+    border-top-color: var(--accent);
+    background: #fff8ee;
+  }
+
+  .day-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem 0.75rem;
+    background: var(--blue-deep);
+    color: var(--white);
+  }
+
+  .day-card--highlight .day-card__header {
+    background: var(--accent-dark);
+  }
+
+  .day-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  .day-name {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .day-card__items {
+    list-style: none;
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .day-card__items li {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+  }
+
+  /* ─── SIGNUP ─── */
+  .signup {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 100%);
+  }
+
+  .signup__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .signup__card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    color: var(--white);
+  }
+
+  .signup__card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .payment-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+  }
+
+  .payment-step__num {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+
+  .payment-step strong {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .payment-step p {
+    font-size: 0.88rem;
+    opacity: 0.85;
+  }
+
+  .bank-box {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .bank-box__label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-top: 0.75rem;
+  }
+
+  .bank-box__label:first-child {
+    margin-top: 0;
+  }
+
+  .bank-box__value {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    word-break: break-all;
+  }
+
+  .bank-box__example {
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 0.9rem;
+  }
+
+  .cancel-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cancel-list li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .cancel-list__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+  }
+
+  .cancel-list__dot--green { background: #4ade80; }
+  .cancel-list__dot--red   { background: #f87171; }
+
+  .quota-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .quota-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .quota-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+  }
+
+  .quota-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.75;
+  }
+
+  .quota-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .quota-note {
+    font-size: 0.82rem;
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+  /* ─── CONTACT ─── */
+  .contact {
+    padding: 5rem 0;
+    background: var(--blue-light);
+  }
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 16px rgba(10, 61, 98, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(10, 61, 98, 0.15);
+  }
+
+  .contact-card__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+  }
+
+  .contact-card__name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--blue-deep);
+  }
+
+  .contact-card__role {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-card__phone {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--blue-mid);
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    background: var(--blue-deep);
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 640px) {
+    .hero__price-tag {
+      position: static;
+      margin: 2rem auto 0;
+      width: fit-content;
+    }
+
+    .hero {
+      padding-bottom: 4rem;
+    }
+  }
+</style>
