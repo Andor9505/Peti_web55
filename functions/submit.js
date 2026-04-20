@@ -47,7 +47,7 @@ export async function onRequestPost(context) {
         "api-key": env.BREVO_API_KEY,
       },
       body: JSON.stringify({
-        sender: { name: "Balatoni Sport Tábor", email: "noreply@balatoni-sporttabor.pages.dev" },
+        sender: { name: "Balatoni Sport Tábor", email: "tothpeter.fitness@gmail.com" },
         to: [{ email: env.RECIPIENT_EMAIL }],
         subject: `Új jelentkezés: ${gyermekNev}`,
         htmlContent,
