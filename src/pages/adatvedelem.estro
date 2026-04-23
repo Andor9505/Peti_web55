@@ -16,12 +16,11 @@ import Layout from "../layouts/Layout.astro";
   <section class="doc-section">
     <div class="container">
 
-      <!-- TARTALOM NAVIGÁCIÓ -->
       <nav class="toc">
         <p class="toc__title">Tartalom</p>
-        <a href="#szolgaltato">1. Szolgáltató adatai</a>
+        <a href="#szolgaltato">1. Az adatkezelő adatai</a>
         <a href="#adatok">2. Kezelt személyes adatok</a>
-        <a href="#cél">3. Adatkezelés célja</a>
+        <a href="#cel">3. Adatkezelés célja</a>
         <a href="#alap">4. Jogalap</a>
         <a href="#tarolás">5. Adattárolás és biztonság</a>
         <a href="#harmadik">6. Harmadik felek</a>
@@ -30,28 +29,36 @@ import Layout from "../layouts/Layout.astro";
         <a href="#kapcsolat">9. Kapcsolat</a>
       </nav>
 
-      <!-- 1. SZOLGÁLTATÓ -->
+      <!-- 1. ADATKEZELŐ -->
       <div class="doc-card" id="szolgaltato">
         <div class="doc-card__header">
-          <span>1.</span> Szolgáltató adatai
+          <span>1.</span> Az adatkezelő adatai
         </div>
         <div class="doc-card__body">
+          <div class="highlight-box">
+            <p class="highlight-box__label">Az adatkezelő személye</p>
+            <p class="highlight-box__name">Tóth Péter</p>
+          </div>
           <div class="info-grid">
             <div class="info-row">
-              <span class="info-label">Név</span>
+              <span class="info-label">Teljes név</span>
               <span class="info-value">Tóth Péter</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Születési dátum</span>
+              <span class="info-value">1996. március 13.</span>
             </div>
             <div class="info-row">
               <span class="info-label">Lakcím</span>
               <span class="info-value">4030 Debrecen, Köszméte utca 31.</span>
             </div>
             <div class="info-row">
-              <span class="info-label">E-mail</span>
-              <span class="info-value">tothpeter.fitness@gmail.com</span>
+              <span class="info-label">E-mail cím</span>
+              <span class="info-value"><a href="mailto:tothpeter.fitness@gmail.com">tothpeter.fitness@gmail.com</a></span>
             </div>
             <div class="info-row">
               <span class="info-label">Telefonszám</span>
-              <span class="info-value">+36 20 / 977-6255</span>
+              <span class="info-value"><a href="tel:+36209776255">+36 20 / 977-6255</a></span>
             </div>
             <div class="info-row">
               <span class="info-label">Weboldal</span>
@@ -60,6 +67,10 @@ import Layout from "../layouts/Layout.astro";
             <div class="info-row">
               <span class="info-label">Tárhelyszolgáltató</span>
               <span class="info-value">Cloudflare, Inc. · 101 Townsend St, San Francisco, CA 94107, USA</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">E-mail szolgáltató</span>
+              <span class="info-value">Brevo SAS · 55 rue d'Amsterdam, 75008 Párizs, Franciaország</span>
             </div>
           </div>
         </div>
@@ -96,7 +107,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <!-- 3. CÉL -->
-      <div class="doc-card" id="cél">
+      <div class="doc-card" id="cel">
         <div class="doc-card__header">
           <span>3.</span> Adatkezelés célja
         </div>
@@ -132,9 +143,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="doc-card__body">
           <ul class="styled-list">
-            <li>A jelentkezési adatok e-mailben kerülnek továbbításra a szervező részére, és <strong>nem tárolódnak adatbázisban</strong>.</li>
+            <li>A jelentkezési adatok e-mailben kerülnek továbbításra az adatkezelő (Tóth Péter) részére, és <strong>nem tárolódnak adatbázisban</strong>.</li>
             <li>Az adatokat a tábor lezárulta után, legkésőbb <strong>2025. augusztus 31-ig</strong> töröljük.</li>
-            <li>Az e-mail küldéshez a <strong>Brevo (Sendinblue) SaaS szolgáltatást</strong> vesszük igénybe (Brevo SAS, 55 rue d'Amsterdam, 75008 Párizs, Franciaország).</li>
+            <li>Az e-mail küldéshez a <strong>Brevo SaaS szolgáltatást</strong> vesszük igénybe.</li>
             <li>A weboldal a <strong>Cloudflare Pages</strong> platformon fut, amely ISO 27001 tanúsítvánnyal rendelkezik.</li>
           </ul>
         </div>
@@ -148,15 +159,18 @@ import Layout from "../layouts/Layout.astro";
         <div class="doc-card__body">
           <div class="third-party-card">
             <p class="third-party-card__name">☁️ Cloudflare, Inc.</p>
-            <p>Tárhelyszolgáltató. A weboldal fájljait és a beérkező kéréseket kezeli. Adatvédelmi tájékoztató: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">cloudflare.com/privacypolicy</a></p>
+            <p>Tárhelyszolgáltató. A weboldal fájljait és a beérkező kéréseket kezeli.<br/>
+            <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></p>
           </div>
           <div class="third-party-card">
-            <p class="third-party-card__name">📧 Brevo (Sendinblue)</p>
-            <p>E-mail küldési szolgáltatás. A beküldött jelentkezési adatokat e-mailben továbbítja a szervező részére. Adatvédelmi tájékoztató: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank">brevo.com/legal/privacypolicy</a></p>
+            <p class="third-party-card__name">📧 Brevo (Sendinblue) SAS</p>
+            <p>E-mail küldési szolgáltatás. A beküldött adatokat e-mailben továbbítja az adatkezelő részére.<br/>
+            <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a></p>
           </div>
           <div class="third-party-card">
             <p class="third-party-card__name">🔤 Google Fonts</p>
-            <p>Betűtípusok betöltéséhez. Betöltéskor az IP-cím átkerülhet a Google szerverére. Adatvédelmi tájékoztató: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+            <p>Betűtípusok betöltéséhez. Betöltéskor az IP-cím átkerülhet a Google szerverére.<br/>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
           </div>
         </div>
       </div>
@@ -171,12 +185,13 @@ import Layout from "../layouts/Layout.astro";
           <ul class="styled-list">
             <li><strong>Hozzáférési jog:</strong> tájékoztatást kérni a kezelt adatairól</li>
             <li><strong>Helyesbítési jog:</strong> pontatlan adatok javítását kérni</li>
-            <li><strong>Törlési jog („elfeledtetéshez való jog"):</strong> adatai törlését kérni</li>
+            <li><strong>Törlési jog:</strong> adatai törlését kérni</li>
             <li><strong>Adathordozhatóság joga:</strong> adatait géppel olvasható formátumban megkapni</li>
             <li><strong>Tiltakozás joga:</strong> az adatkezelés ellen tiltakozni</li>
           </ul>
           <div class="info-box">
-            Jogai érvényesítéséhez írjon a <strong>tothpeter.fitness@gmail.com</strong> e-mail címre. Panasszal a <strong>Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH)</strong> is fordulhat: <a href="https://naih.hu" target="_blank">naih.hu</a>
+            Jogai érvényesítéséhez írjon a <strong>tothpeter.fitness@gmail.com</strong> e-mail címre.<br/>
+            Panasszal a <strong>Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH)</strong> is fordulhat: <a href="https://naih.hu" target="_blank" rel="noopener">naih.hu</a>
           </div>
         </div>
       </div>
@@ -188,7 +203,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="doc-card__body">
           <p>A weboldal az alábbi sütiket használja:</p>
-
           <div class="cookie-table">
             <div class="cookie-row cookie-row--header">
               <span>Típus</span>
@@ -208,10 +222,15 @@ import Layout from "../layouts/Layout.astro";
               <span>Cloudflare bot-védelem</span>
               <span>30 perc</span>
             </div>
+            <div class="cookie-row">
+              <span><span class="badge badge--green">Szükséges</span></span>
+              <span>cookie-consent</span>
+              <span>Cookie hozzájárulás tárolása</span>
+              <span>Böngésző bezárásáig</span>
+            </div>
           </div>
-
-          <div class="info-box" style="margin-top: 1.25rem;">
-            Ez a weboldal <strong>nem használ</strong> marketing, analitikai vagy követési sütiket. A fenti sütik a tárhelyszolgáltató (Cloudflare) által automatikusan elhelyezett, technikailag szükséges sütik.
+          <div class="info-box" style="margin-top:1.25rem;">
+            Ez a weboldal <strong>nem használ</strong> marketing, analitikai vagy követési sütiket.
           </div>
         </div>
       </div>
@@ -222,11 +241,15 @@ import Layout from "../layouts/Layout.astro";
           <span>9.</span> Kapcsolat
         </div>
         <div class="doc-card__body">
-          <p>Adatvédelmi kérdésekkel kapcsolatban forduljon hozzánk:</p>
+          <p>Adatvédelmi kérdésekkel kapcsolatban forduljon az adatkezelőhöz:</p>
           <div class="info-grid" style="margin-top:1rem;">
             <div class="info-row">
-              <span class="info-label">Adatkezelő</span>
+              <span class="info-label">Adatkezelő neve</span>
               <span class="info-value">Tóth Péter</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Lakcím</span>
+              <span class="info-value">4030 Debrecen, Köszméte utca 31.</span>
             </div>
             <div class="info-row">
               <span class="info-label">E-mail</span>
@@ -244,19 +267,15 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <footer class="footer">
-    <p>© 2025 Balatoni Sport Tábor &nbsp;·&nbsp; Tóth Péter &nbsp;·&nbsp; <a href="/adatvedelem" style="color:rgba(255,255,255,0.55);">Adatvédelmi tájékoztató</a></p>
+    <p>© 2025 Balatoni Sport Tábor &nbsp;·&nbsp; Tóth Péter &nbsp;·&nbsp;
+    <a href="/adatvedelem" style="color:rgba(255,255,255,0.55);">Adatvédelmi tájékoztató</a></p>
   </footer>
 
 </Layout>
 
 <style>
-  .container {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
 
-  /* ─── HERO ─── */
   .page-hero {
     background: linear-gradient(155deg, var(--blue-deep) 0%, var(--blue-mid) 60%, var(--blue-bright) 100%);
     padding: 3rem 2rem 4rem;
@@ -272,23 +291,9 @@ import Layout from "../layouts/Layout.astro";
     pointer-events: none;
   }
 
-  .page-hero__content {
-    max-width: 860px;
-    margin: 0 auto;
-    color: var(--white);
-    position: relative;
-    z-index: 1;
-  }
+  .page-hero__content { max-width: 860px; margin: 0 auto; color: var(--white); position: relative; z-index: 1; }
 
-  .back-link {
-    display: inline-block;
-    color: rgba(255,255,255,0.75);
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    transition: color 0.15s;
-  }
-
+  .back-link { display: inline-block; color: rgba(255,255,255,0.75); font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem; transition: color 0.15s; }
   .back-link:hover { color: var(--white); }
 
   .hero-badge {
@@ -305,65 +310,17 @@ import Layout from "../layouts/Layout.astro";
     margin-bottom: 1rem;
   }
 
-  .hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.8rem, 8vw, 5rem);
-    line-height: 0.92;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.75rem;
-  }
+  .hero-title { font-family: var(--font-display); font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.92; letter-spacing: 0.02em; margin-bottom: 0.75rem; }
+  .hero-sub { font-size: 0.95rem; opacity: 0.7; }
 
-  .hero-sub {
-    font-size: 0.95rem;
-    opacity: 0.7;
-  }
+  .doc-section { padding: 3rem 0 4rem; background: var(--blue-light); }
 
-  /* ─── DOC SECTION ─── */
-  .doc-section {
-    padding: 3rem 0 4rem;
-    background: var(--blue-light);
-  }
-
-  /* ─── TOC ─── */
-  .toc {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 1.5rem 1.75rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 16px rgba(10,61,98,0.07);
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .toc__title {
-    font-weight: 700;
-    color: var(--blue-deep);
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
-  .toc a {
-    font-size: 0.9rem;
-    color: var(--blue-mid);
-    text-decoration: none;
-    transition: color 0.15s;
-    padding: 0.15rem 0;
-  }
-
+  .toc { background: var(--white); border-radius: 16px; padding: 1.5rem 1.75rem; margin-bottom: 1.5rem; box-shadow: 0 2px 16px rgba(10,61,98,0.07); display: flex; flex-direction: column; gap: 0.4rem; }
+  .toc__title { font-weight: 700; color: var(--blue-deep); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .toc a { font-size: 0.9rem; color: var(--blue-mid); transition: color 0.15s; padding: 0.15rem 0; }
   .toc a:hover { color: var(--blue-deep); text-decoration: underline; }
 
-  /* ─── DOC CARD ─── */
-  .doc-card {
-    background: var(--white);
-    border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(10,61,98,0.07);
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    scroll-margin-top: 2rem;
-  }
+  .doc-card { background: var(--white); border-radius: 16px; box-shadow: 0 2px 16px rgba(10,61,98,0.07); margin-bottom: 1.5rem; overflow: hidden; scroll-margin-top: 2rem; }
 
   .doc-card__header {
     background: var(--blue-deep);
@@ -376,208 +333,63 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
   }
 
-  .doc-card__header span:first-child {
-    opacity: 0.5;
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    line-height: 1;
-  }
-
-  .doc-card__body {
-    padding: 1.75rem;
-    font-size: 0.93rem;
-    line-height: 1.7;
-    color: var(--text-dark);
-  }
-
+  .doc-card__header span:first-child { opacity: 0.5; font-family: var(--font-display); font-size: 1.4rem; line-height: 1; }
+  .doc-card__body { padding: 1.75rem; font-size: 0.93rem; line-height: 1.7; color: var(--text-dark); }
   .doc-card__body p + p { margin-top: 0.75rem; }
 
-  /* ─── INFO GRID ─── */
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  .highlight-box__label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.25rem; }
+  .highlight-box__name { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.03em; line-height: 1; }
+
   .info-grid { display: flex; flex-direction: column; gap: 0; }
-
-  .info-row {
-    display: flex;
-    gap: 1rem;
-    padding: 0.65rem 0;
-    border-bottom: 1px solid var(--blue-light);
-    align-items: flex-start;
-  }
-
+  .info-row { display: flex; gap: 1rem; padding: 0.65rem 0; border-bottom: 1px solid var(--blue-light); align-items: flex-start; }
   .info-row:last-child { border-bottom: none; }
+  .info-label { min-width: 160px; font-size: 0.82rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; padding-top: 0.1rem; }
+  .info-value { font-weight: 500; color: var(--text-dark); font-size: 0.93rem; }
+  .info-value a { color: var(--blue-mid); }
 
-  .info-label {
-    min-width: 160px;
-    font-size: 0.83rem;
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding-top: 0.1rem;
-  }
+  .data-group { background: var(--blue-light); border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1rem; }
+  .data-group__title { font-weight: 700; color: var(--blue-deep); margin-bottom: 0.5rem; font-size: 0.9rem; }
+  .data-group ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+  .data-group ul li::before { content: "· "; color: var(--blue-mid); font-weight: 700; }
 
-  .info-value {
-    font-weight: 500;
-    color: var(--text-dark);
-    font-size: 0.93rem;
-  }
+  .styled-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
+  .styled-list li { padding-left: 1.25rem; position: relative; }
+  .styled-list li::before { content: "✓"; position: absolute; left: 0; color: var(--blue-mid); font-weight: 700; font-size: 0.85rem; }
 
-  /* ─── DATA GROUPS ─── */
-  .data-group {
-    background: var(--blue-light);
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-    margin-top: 1rem;
-  }
-
-  .data-group__title {
-    font-weight: 700;
-    color: var(--blue-deep);
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  .data-group ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-
-  .data-group ul li::before {
-    content: "· ";
-    color: var(--blue-mid);
-    font-weight: 700;
-  }
-
-  /* ─── STYLED LIST ─── */
-  .styled-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-  }
-
-  .styled-list li {
-    padding-left: 1.25rem;
-    position: relative;
-  }
-
-  .styled-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--blue-mid);
-    font-weight: 700;
-    font-size: 0.85rem;
-  }
-
-  /* ─── INFO BOX ─── */
-  .info-box {
-    background: #e8f4fd;
-    border-left: 4px solid var(--blue-mid);
-    border-radius: 0 8px 8px 0;
-    padding: 0.9rem 1.2rem;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--blue-deep);
-  }
-
+  .info-box { background: #e8f4fd; border-left: 4px solid var(--blue-mid); border-radius: 0 8px 8px 0; padding: 0.9rem 1.2rem; margin-top: 1rem; font-size: 0.9rem; color: var(--blue-deep); }
   .info-box a { color: var(--blue-mid); }
 
-  /* ─── THIRD PARTY CARDS ─── */
-  .third-party-card {
-    border: 1px solid #d0e8f7;
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
+  .third-party-card { border: 1px solid #d0e8f7; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; }
   .third-party-card:last-child { margin-bottom: 0; }
-
-  .third-party-card__name {
-    font-weight: 700;
-    color: var(--blue-deep);
-    margin-bottom: 0.3rem;
-    font-size: 0.95rem;
-  }
-
-  .third-party-card p {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-  }
-
+  .third-party-card__name { font-weight: 700; color: var(--blue-deep); margin-bottom: 0.3rem; font-size: 0.95rem; }
+  .third-party-card p { font-size: 0.88rem; color: var(--text-muted); }
   .third-party-card a { color: var(--blue-mid); }
 
-  /* ─── COOKIE TABLE ─── */
-  .cookie-table {
-    border: 1px solid #d0e8f7;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 1rem;
-    font-size: 0.86rem;
-  }
-
-  .cookie-row {
-    display: grid;
-    grid-template-columns: 130px 160px 1fr 90px;
-    gap: 0.5rem;
-    padding: 0.7rem 1rem;
-    border-bottom: 1px solid #e8f4fd;
-    align-items: center;
-  }
-
+  .cookie-table { border: 1px solid #d0e8f7; border-radius: 10px; overflow: hidden; margin-top: 1rem; font-size: 0.86rem; }
+  .cookie-row { display: grid; grid-template-columns: 130px 140px 1fr 110px; gap: 0.5rem; padding: 0.7rem 1rem; border-bottom: 1px solid #e8f4fd; align-items: center; }
   .cookie-row:last-child { border-bottom: none; }
+  .cookie-row--header { background: var(--blue-deep); color: var(--white); font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
+  .badge--green { background: #d1fae5; color: #065f46; }
 
-  .cookie-row--header {
-    background: var(--blue-deep);
-    color: var(--white);
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+  .footer { background: var(--blue-deep); color: rgba(255,255,255,0.55); text-align: center; padding: 1.5rem; font-size: 0.85rem; }
 
-  .badge {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 700;
-  }
-
-  .badge--green {
-    background: #d1fae5;
-    color: #065f46;
-  }
-
-  /* ─── FOOTER ─── */
-  .footer {
-    background: var(--blue-deep);
-    color: rgba(255,255,255,0.55);
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.85rem;
-  }
-
-  /* ─── RESPONSIVE ─── */
   @media (max-width: 640px) {
-    .info-label { min-width: 110px; font-size: 0.75rem; }
+    .info-label { min-width: 100px; font-size: 0.75rem; }
     .doc-card__body { padding: 1.25rem; }
     .toc { padding: 1.25rem; }
     .page-hero { padding: 2rem 1.25rem 3rem; }
-
-    .cookie-row {
-      grid-template-columns: 1fr 1fr;
-      gap: 0.25rem;
-    }
-
-    .cookie-row--header span:nth-child(3),
-    .cookie-row--header span:nth-child(4),
-    .cookie-row span:nth-child(3),
-    .cookie-row span:nth-child(4) {
-      grid-column: 1 / -1;
-      font-size: 0.8rem;
-    }
+    .cookie-row { grid-template-columns: 1fr 1fr; }
+    .cookie-row span:nth-child(3), .cookie-row span:nth-child(4) { grid-column: 1 / -1; }
+    .highlight-box__name { font-size: 1.5rem; }
   }
 </style>
